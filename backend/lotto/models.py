@@ -11,6 +11,9 @@ class User(AbstractUser):
 class ScratchGroup(models.Model):
     name = models.CharField(max_length=255)
 
+    def __str__(self):
+        return f'Scratch group: {self.name}'
+
 
 class Award(models.Model):
     amount = models.IntegerField()
