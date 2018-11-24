@@ -13,21 +13,6 @@ class ScratchGroupViewSet(viewsets.ModelViewSet):
     serializer_class = serializers.ScratchGroupSerializer
 
 
-class AwardViewSet(viewsets.ModelViewSet):
-    queryset = models.Award.objects.all()
-    serializer_class = serializers.AwardSerializer
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = models.User.objects.all()
-    serializer_class = serializers.UserSerializer
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = models.User.objects.all()
-    serializer_class = serializers.UserSerializer
-
-
-class UserViewSet(viewsets.ModelViewSet):
-    queryset = models.User.objects.all()
-    serializer_class = serializers.UserSerializer
+class ScratchViewSet(viewsets.ModelViewSet):
+    queryset = models.Scratch.objects.all()
+    serializer_class = serializers.ScratchSerializer
