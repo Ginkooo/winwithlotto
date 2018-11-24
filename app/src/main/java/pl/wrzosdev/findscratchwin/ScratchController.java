@@ -33,16 +33,16 @@ public class ScratchController {
     }
 
     public static ArrayList<Scratch> getAllScratches() throws IOException {
-        return getData("http://10.250.193.25:8000/api/scratches/");
+        return getData(Config.url + "/api/scratches/");
     }
 
     public static ArrayList<Scratch> getAddScratchesBetweenLatitude(double latitudeLte, double latitudeGte) throws IOException {
-        return getData("http://10.250.193.25:8000/api/scratches/?latitude__lte="
+        return getData(Config.url + "/api/scratches/?latitude__lte="
                 + latitudeLte + "&latitude__gte=" + latitudeGte + "&longtitude__lte=&longtitude__gte=");
     }
 
     public static ArrayList<Scratch> getAddScratchesBetweenLongtitude(double longtitudeLte, double longtitudeGte) throws IOException {
-        return getData("http://10.250.193.25:8000/api/scratches/?latitude__lte=&latitude__gte=&longtitude__lte="
+        return getData(Config.url + "/api/scratches/?latitude__lte=&latitude__gte=&longtitude__lte="
                 + longtitudeLte + "&longtitude__gte=" + longtitudeGte);
     }
 
@@ -50,7 +50,7 @@ public class ScratchController {
                                                                                  double latitudeGte,
                                                                                  double longtitudeLte,
                                                                                  double longtitudeGte) throws IOException {
-        return getData("http://10.250.193.25:8000/api/scratches/?latitude__lte="
+        return getData(Config.url + "/api/scratches/?latitude__lte="
                 + latitudeLte + "&latitude__gte=" + latitudeGte + "&longtitude__lte="
                 + longtitudeLte + "&longtitude__gte=" + longtitudeGte);
     }

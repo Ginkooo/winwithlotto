@@ -15,7 +15,7 @@ public class UserController {
     public static List<User> getAllUsers() throws IOException {
         OkHttpClient client = new OkHttpClient();
         Request request = new Request.Builder()
-                .url("http://10.250.193.25:8000/api/users/")
+                .url(Config.url + "/api/users/")
                 .build();
         Response response = client.newCall(request).execute();
         Gson gson = new Gson();

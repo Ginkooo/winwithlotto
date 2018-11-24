@@ -17,7 +17,7 @@ public class AuthController {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://10.250.193.25:8000/api/sing_up/")
+                .url(Config.url + "/api/sing_up/")
                 .post(requestBody)
                 .build();
 
@@ -36,7 +36,7 @@ public class AuthController {
                 .build();
 
         Request request = new Request.Builder()
-                .url("http://10.250.193.25:8000/api/get_token/")
+                .url(Config.url + "/api/get_token/")
                 .post(requestBody)
                 .build();
 
