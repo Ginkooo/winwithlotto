@@ -49,8 +49,12 @@ public class ScratchGroupController {
         return scratchGroups;
     }
 
-    public static ScratchGroup getScratchGroupById(long id) {
+    public static ScratchGroup getScratchGroupById(long id) throws IOException {
+        return getItem(Config.url + "/api/scratch-groups/" + id);
+    }
 
+    public static List<ScratchGroup> getScratchGroups() throws IOException {
+        return getData(Config.url + "/api/scratch-groups/");
     }
 
 }
