@@ -5,7 +5,7 @@ from django.contrib.auth.models import AbstractUser
 
 
 class User(AbstractUser):
-    pass
+    referred_by = models.ForeignKey('self', on_delete=models.SET_NULL, null=True)
 
 
 class ScratchGroup(models.Model):
