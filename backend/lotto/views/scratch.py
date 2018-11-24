@@ -1,3 +1,4 @@
+import django_filters
 from rest_framework import viewsets
 
 from lotto import models, serializers
@@ -14,5 +15,9 @@ class ScratchGroupViewSet(viewsets.ModelViewSet):
 
 
 class ScratchViewSet(viewsets.ModelViewSet):
+    filterset_fields = {
+        'latitude': 'lte gte'.split(),
+        'longtitude': 'lte gte'.split(),
+    }
     queryset = models.Scratch.objects.all()
     serializer_class = serializers.ScratchSerializer
