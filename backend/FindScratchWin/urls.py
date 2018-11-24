@@ -18,10 +18,15 @@ from django.urls import path, include
 
 from rest_framework import routers
 
-from lotto.views import scratch
+from lotto.views import scratch, award, user
 
 router = routers.DefaultRouter()
 router.register('scratch-types', scratch.ScratchTypeViewSet)
+router.register('scratches', scratch.ScratchViewSet)
+router.register('scratch-groups', scratch.ScratchGroupViewSet)
+router.register('coin-bags', user.CoinBagViewSet)
+router.register('users', user.UserViewSet)
+router.register('awards', award.AwardViewSet)
 
 urlpatterns = [
     path('admin/', admin.site.urls),
