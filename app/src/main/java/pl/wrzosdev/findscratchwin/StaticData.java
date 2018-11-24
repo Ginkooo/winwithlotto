@@ -1,15 +1,16 @@
 package pl.wrzosdev.findscratchwin;
 
-import android.graphics.Point;
+import com.google.gson.Gson;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
 
 import java.io.IOException;
+import java.util.ArrayList;
 
 public class StaticData {
 
-    public static Point getData() throws IOException {
+    public static ArrayList<Scratch> getData() throws IOException {
 
         OkHttpClient client = new OkHttpClient();
 
@@ -19,10 +20,15 @@ public class StaticData {
 
             Response response = client.newCall(request).execute();
 
-            //Point p = new Point()
-        System.out.println(response.body().string());
+            Scratch[] scratches;
+            Gson gson = new Gson();
+            scratches = gson.fromJson(response.body().string(), Scratch[].class);
 
-            return null;
+            ArrayList<Scratch> scratchArrayList = new ArrayList<>();
+            for (Scratch scratch: scratches) {
+                scratchArrayList.add(scratch);
+            }
 
+            return scratchArrayList;
     }
 }

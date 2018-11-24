@@ -6,6 +6,9 @@ import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
 import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
+import android.os.StrictMode
+
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,9 +24,8 @@ class MainActivity : AppCompatActivity() {
             }
             R.id.navigation_notifications -> {
 
-                //Log.d("MAcct", """${StaticData.getData().x}
-                // ${StaticData.getData().y} """)
-                Log.d("Resp", """${StaticData.getData()}""")
+                Log.d("MAcct", """${StaticData.getData()}""")
+                //Log.d("Resp", """${StaticData.getData()}""")
 //                message.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
             }
@@ -36,5 +38,8 @@ class MainActivity : AppCompatActivity() {
         setContentView(R.layout.activity_main)
 
         navigation.setOnNavigationItemSelectedListener(mOnNavigationItemSelectedListener)
+
+        val policy = StrictMode.ThreadPolicy.Builder().permitAll().build()
+        StrictMode.setThreadPolicy(policy)
     }
 }
