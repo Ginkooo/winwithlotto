@@ -1,8 +1,10 @@
 package pl.wrzosdev.findscratchwin
 
+import android.graphics.Point
 import android.os.Bundle
 import android.support.design.widget.BottomNavigationView
 import android.support.v7.app.AppCompatActivity
+import android.util.Log
 import kotlinx.android.synthetic.main.activity_main.*
 
 class MainActivity : AppCompatActivity() {
@@ -18,7 +20,11 @@ class MainActivity : AppCompatActivity() {
                 return@OnNavigationItemSelectedListener true
             }
             R.id.navigation_notifications -> {
-                message.setText(R.string.title_notifications)
+
+                //Log.d("MAcct", """${StaticData.getData().x}
+                // ${StaticData.getData().y} """)
+                Log.d("Resp", """${StaticData.getData()}""")
+//                message.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
             }
         }
