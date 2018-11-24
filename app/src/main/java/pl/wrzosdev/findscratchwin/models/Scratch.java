@@ -1,4 +1,4 @@
-package pl.wrzosdev.findscratchwin;
+package pl.wrzosdev.findscratchwin.models;
 
 public class Scratch {
 

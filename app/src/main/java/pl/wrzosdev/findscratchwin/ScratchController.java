@@ -4,13 +4,14 @@ import com.google.gson.Gson;
 import okhttp3.OkHttpClient;
 import okhttp3.Request;
 import okhttp3.Response;
+import pl.wrzosdev.findscratchwin.models.Scratch;
 
 import java.io.IOException;
 import java.util.ArrayList;
 
-public class StaticData {
+public class ScratchController {
 
-    public static ArrayList<Scratch> getData() throws IOException {
+    public static ArrayList<Scratch> getAllScratches() throws IOException {
 
         OkHttpClient client = new OkHttpClient();
 
