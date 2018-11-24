@@ -18,7 +18,7 @@ public class AuthController {
                 .build();
 
         Request request = new Request.Builder()
-                .url(Config.url + "/api/sing_up/")
+                .url(Config.url + "/api/sign_up/")
                 .post(requestBody)
                 .build();
 
