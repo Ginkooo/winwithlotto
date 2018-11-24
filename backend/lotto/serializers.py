@@ -34,6 +34,9 @@ class CoinBagSerializer(serializers.ModelSerializer):
 
 
 class ScratchSerializer(serializers.ModelSerializer):
+    scratch_type = ScratchTypeSerializer(read_only=True)
+    scratch_group = ScratchGroupSerializer(read_only=True)
+
     class Meta:
         model = models.Scratch
         fields = '__all__'
