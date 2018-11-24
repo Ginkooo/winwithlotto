@@ -1,6 +1,5 @@
 package pl.wrzosdev.findscratchwin.models;
 
-import java.util.Collection;
 import java.util.Date;
 
 public class User {
@@ -16,7 +15,7 @@ public class User {
     private boolean staff;
     private boolean active;
     private Date dateJoined;
-    private Collection<String> groups;
-    private Collection<String> userPermissions;
+    private String[] groups;
+    private String[] userPermissions;
 
 }
