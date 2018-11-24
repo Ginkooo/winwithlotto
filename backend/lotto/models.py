@@ -31,3 +31,4 @@ class CoinBag(models.Model):
 class Scratch(models.Model):
     latitude = models.FloatField()
     longtitude = models.FloatField()
+    scratch_type = models.ForeignKey(ScratchType, on_delete=models.CASCADE)
