@@ -12,8 +12,13 @@ class ScratchGroup(models.Model):
     name = models.CharField(max_length=255)
 
 
+class Award(models.Model):
+    amount = models.IntegerField()
+
+
 class ScratchType(models.Model):
     scratch_group = models.ForeignKey(ScratchGroup, on_delete=models.CASCADE)
+    amounts = models.ManyToManyField(Award)
 
 
 class CoinBag(models.Model):
@@ -24,4 +29,4 @@ class CoinBag(models.Model):
 
 class Scratch(models.Model):
     latitude = models.FloatField()
-    longtitude = models.ForeignKey(ScratchType)
+    longtitude = models.FloatField()
