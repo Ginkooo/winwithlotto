@@ -33,7 +33,7 @@ class ScratchType(models.Model):
 
 class CoinBag(models.Model):
     user = models.ForeignKey(User, on_delete=models.CASCADE)
-    scratch_type = models.ForeignKey(ScratchType, on_delete=models.CASCADE)
+    scratch_group = models.ForeignKey(ScratchGroup, on_delete=models.CASCADE)
     quantity = models.IntegerField(default=0)
 
     def __str__(self):
