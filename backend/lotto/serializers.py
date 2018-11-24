@@ -15,17 +15,18 @@ class ScratchGroupSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ScratchTypeSerializer(serializers.ModelSerializer):
-    scratch_group = ScratchGroupSerializer(read_only=True)
-
-    class Meta:
-        model = models.ScratchType
-        fields = '__all__'
-
-
 class AwardSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.Award
+        fields = '__all__'
+
+
+class ScratchTypeSerializer(serializers.ModelSerializer):
+    scratch_group = ScratchGroupSerializer(read_only=True)
+    awards = AwardSerializer(read_only=True)
+
+    class Meta:
+        model = models.ScratchType
         fields = '__all__'
 
 
