@@ -9,15 +9,17 @@ class UserSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
 
-class ScratchTypeSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = models.ScratchType
-        fields = '__all__'
-
-
 class ScratchGroupSerializer(serializers.ModelSerializer):
     class Meta:
         model = models.ScratchGroup
+        fields = '__all__'
+
+
+class ScratchTypeSerializer(serializers.ModelSerializer):
+    scratch_group = ScratchGroupSerializer(read_only=True)
+
+    class Meta:
+        model = models.ScratchType
         fields = '__all__'
 
 
@@ -35,7 +37,6 @@ class CoinBagSerializer(serializers.ModelSerializer):
 
 class ScratchSerializer(serializers.ModelSerializer):
     scratch_type = ScratchTypeSerializer(read_only=True)
-    scratch_group = ScratchGroupSerializer(read_only=True)
 
     class Meta:
         model = models.Scratch
