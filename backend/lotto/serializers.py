@@ -23,7 +23,7 @@ class AwardSerializer(serializers.ModelSerializer):
 
 class ScratchTypeSerializer(serializers.ModelSerializer):
     scratch_group = ScratchGroupSerializer(read_only=True)
-    awards = AwardSerializer(read_only=True)
+    awards = AwardSerializer(read_only=True, many=True)
 
     class Meta:
         model = models.ScratchType
