@@ -25,7 +25,7 @@ class Award(models.Model):
 class ScratchType(models.Model):
     name = models.CharField(max_length=30)
     scratch_group = models.ForeignKey(ScratchGroup, on_delete=models.CASCADE)
-    amounts = models.ManyToManyField(Award)
+    awards = models.ManyToManyField(Award)
 
     def __str__(self):
         return f'ScratchType: {self.name}'
