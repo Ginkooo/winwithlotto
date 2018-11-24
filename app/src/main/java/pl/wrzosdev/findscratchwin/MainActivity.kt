@@ -24,7 +24,6 @@ class MainActivity : AppCompatActivity() {
             R.id.navigation_notifications -> {
 
                 Log.d("MAcct", """${ScratchController.getAllScratches()}""")
-                Log.d("Users", """${UserController.getAllUsers()}""")
                 //Log.d("Resp", """${ScratchController.getData()}""")
 //                message.setText(R.string.title_notifications)
                 return@OnNavigationItemSelectedListener true
