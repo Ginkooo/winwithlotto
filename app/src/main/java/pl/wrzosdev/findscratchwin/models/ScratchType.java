@@ -2,8 +2,8 @@ package pl.wrzosdev.findscratchwin.models;
 
 public class ScratchType {
 
-    private Long id;
+    private long id;
     private String name;
-    private int scratchGroup;
-    private int[] amounts;
+    private long scratchGroup;
+    private long[] amounts;
 }
