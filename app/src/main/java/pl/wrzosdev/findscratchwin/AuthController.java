@@ -2,6 +2,7 @@ package pl.wrzosdev.findscratchwin;
 
 import com.google.gson.Gson;
 import okhttp3.*;
+import pl.wrzosdev.findscratchwin.models.AuthToken;
 
 import java.io.IOException;
 
