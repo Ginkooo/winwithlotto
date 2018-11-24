@@ -36,17 +36,17 @@ public class ScratchController {
         return getData(Config.url + "/api/scratches/");
     }
 
-    public static ArrayList<Scratch> getAddScratchesBetweenLatitude(double latitudeLte, double latitudeGte) throws IOException {
+    public static ArrayList<Scratch> getAllScratchesBetweenLatitude(double latitudeLte, double latitudeGte) throws IOException {
         return getData(Config.url + "/api/scratches/?latitude__lte="
                 + latitudeLte + "&latitude__gte=" + latitudeGte + "&longtitude__lte=&longtitude__gte=");
     }
 
-    public static ArrayList<Scratch> getAddScratchesBetweenLongtitude(double longtitudeLte, double longtitudeGte) throws IOException {
+    public static ArrayList<Scratch> getAllScratchesBetweenLongtitude(double longtitudeLte, double longtitudeGte) throws IOException {
         return getData(Config.url + "/api/scratches/?latitude__lte=&latitude__gte=&longtitude__lte="
                 + longtitudeLte + "&longtitude__gte=" + longtitudeGte);
     }
 
-    public static ArrayList<Scratch> getAddScratchesBetweenLatitudeAndLongtitude(double latitudeLte,
+    public static ArrayList<Scratch> getAllScratchesBetweenLatitudeAndLongtitude(double latitudeLte,
                                                                                  double latitudeGte,
                                                                                  double longtitudeLte,
                                                                                  double longtitudeGte) throws IOException {

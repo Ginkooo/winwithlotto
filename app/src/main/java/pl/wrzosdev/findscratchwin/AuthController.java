@@ -2,6 +2,7 @@ package pl.wrzosdev.findscratchwin;
 
 import com.google.gson.Gson;
 import okhttp3.*;
+import pl.wrzosdev.findscratchwin.models.AuthToken;
 
 import java.io.IOException;
 
@@ -17,7 +18,7 @@ public class AuthController {
                 .build();
 
         Request request = new Request.Builder()
-                .url(Config.url + "/api/sing_up/")
+                .url(Config.url + "/api/sign_up/")
                 .post(requestBody)
                 .build();
 

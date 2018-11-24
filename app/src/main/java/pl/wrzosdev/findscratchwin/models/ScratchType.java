@@ -4,6 +4,6 @@ public class ScratchType {
 
     private long id;
     private String name;
-    private long scratchGroup;
-    private long[] amounts;
+    private ScratchGroup scratch_group;
+    private long[] awards;
 }
