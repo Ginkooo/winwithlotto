@@ -37,7 +37,7 @@ class CoinBag(models.Model):
     quantity = models.IntegerField(default=0)
 
     def __str__(self):
-        return f'Coin bag of {self.user} with {self.quantity} coins for stratch type {self.scratch_type}'
+        return f'Coin bag of {self.user} with {self.quantity} coins for stratch group {self.scratch_group}'
 
 
 class Scratch(models.Model):
